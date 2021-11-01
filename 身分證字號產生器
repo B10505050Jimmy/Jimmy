@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>/* 亂數相關函數 */
+#include <time.h>/* 時間相關函數 */
+int main(){
+  /* 設定亂數種子，以時間為種子，因每次執行程式的時間不同*/
+  srand( time(NULL) );
+
+
+  /* 指定亂數範圍 */
+  int min = 100000000;
+  int max = 999999999;
+
+  /* 產生 [min , max] 的整數亂數 */
+  int x = rand() % (max - min + 1) + min;
+  int a;
+  /* 產生隨機英文字母 */
+  a=rand()%26;
+  /* 使英文字母轉為大寫*/
+  a=a+'A';
+
+  printf("%c%d\n",a, x);
+  return 0;
+}
